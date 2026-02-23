@@ -13,7 +13,6 @@ async function bootstrap() {
 
   app.useGlobalPipes(new ValidationPipe());
 
-  await app.listen(3001);
-  console.log('API running on http://192.168.1.175:3001');
+  await app.listen(process.env.PORT || 3000);
 }
 bootstrap();
